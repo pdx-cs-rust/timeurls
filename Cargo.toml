@@ -1,0 +1,23 @@
+[package]
+name = "timeurls"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = "0.3.25"
+
+[dependencies.hyper]
+version = "0.14.23"
+features = ["tcp", "http1", "http2", "client"]
+
+[dependencies.tokio]
+version = "1.23.0"
+features = ["rt", "rt-multi-thread", "macros"]
+
+[[bin]]
+name = "timeurls"
+path = "timeurls.rs"
+
+[features]
